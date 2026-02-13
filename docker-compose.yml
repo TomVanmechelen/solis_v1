@@ -1,0 +1,14 @@
+services:
+  solis_dev:
+    image: solis_dev
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./examples/config.yml:/app/config.yml
+      - ./examples:/app/examples
+      - ./examples/input:/app/data/input
+      - ./examples/output:/app/data
+
+
+
