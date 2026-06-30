@@ -1,0 +1,9 @@
+:debug: true
+:solis:
+  :env:
+        :graph_prefix: icandid
+:csv:
+  :dir: /app/data/
+  :model_id: icandid
+
+

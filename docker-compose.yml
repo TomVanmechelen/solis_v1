@@ -1,14 +1,24 @@
 services:
-  solis_dev:
+  solis_icandid_dev:
     image: solis_dev
     build: 
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - ./examples/config.yml:/app/config.yml
+      - ./examples/icandid_config.yml:/app/config.yml
       - ./examples:/app/examples
       - ./examples/input:/app/data/input
       - ./examples/output:/app/data
 
+  solis_resilience_dev:
+    image: solis_dev
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./examples/resilience_config.yml:/app/config.yml
+      - ./examples:/app/examples
+      - "C:/Users/Tom/Documents/iCANDID/datamodel/resilience:/app/data/resilience"            
+      - ./examples/output:/app/data
 
 
